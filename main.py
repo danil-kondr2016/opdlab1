@@ -10,11 +10,8 @@ if page.status_code != 200:
     exit(-1)
 
 dom = BeautifulSoup(page.text, "html.parser")
-imgs = dom.findAll('img')
-
-cars = set()
-for x in imgs:
-    cars.add(x["alt"])
+div = dom.find('div', class_='eqhdpot0')
+imgs = div.findAll('img')
 
 cars = set(x["alt"] for x in imgs if x["alt"] != '')
 print(*cars, sep='\n')

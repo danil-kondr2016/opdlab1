@@ -14,4 +14,5 @@ div = dom.find('div', class_='eqhdpot0')
 imgs = div.findAll('img')
 
 cars = set(x["alt"] for x in imgs if x["alt"] != '')
-print(*cars, sep='\n')
+with open('cars.txt', 'w') as file:
+    print(*cars, file=file, sep='\n')

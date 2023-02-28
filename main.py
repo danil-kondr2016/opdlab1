@@ -1,6 +1,5 @@
-from bs4 import BeautifulSoup # импортируем библиотеку BeautifulSoup
-import requests # импортируем библиотеку requests
-import json
+from bs4 import BeautifulSoup
+import requests
 
 url = "https://auto.drom.ru"
 

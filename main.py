@@ -15,3 +15,4 @@ imgs = div.findAll('img')
 cars = set(x["alt"] for x in imgs if x["alt"] != '')
 with open('cars.txt', 'w') as file:
     print(*cars, file=file, sep='\n')
+print('Список объявлений в cars.txt')
